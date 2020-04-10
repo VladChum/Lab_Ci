@@ -21,72 +21,6 @@ int KolNull(int m, int n)
     return kol_null;
 }
 
-/*
-int Chek(int** arr, int n, int m, int max_line, int max_column)
-{
-	int kol = 1;
-	int kol_line_column = 0;
-	int i;
-	int j = 0;
-	int max_c = max_column;
-
-	while (kol < max_line)
-	{
-		for (i = 0; i < n; ++i)
-		{
-			if (KolNullInLine(i, arr, n) == kol)
-			{
-				kol++;
-				continue;
-			}
-		}
-		break;
-	}
-
-	if (kol - 1 == max_line)
-	{
-		kol_line_column = max_column;
-	}
-
-	printf("\n%d\n", kol_line_column);
-	kol = 0;
-	while (kol < max_line)
-	{
-		for (j = 0; j < m; ++j)
-		{
-			if (KolNullInColumn(j, arr, n) == max_c)
-			{
-				kol++;
-				max_c--;
-				continue;
-			}
-		}
-		break;
-	}
-	if (kol == max_column)
-	{
-		kol = max_line;
-	}
-	else
-		if (kol == max_column + 1)
-		{
-			kol--;
-		}
-
-	printf("\n%d\n", kol);
-
-	if (kol_line_column + kol == max_column + max_line)
-	{
-		printf("\n\n\kol = %dn\n", kol_line_column + kol);
-		return 1;
-	}
-	else
-	{
-		printf("\n\n\kol = %d\n\n", kol_line_column + kol);
-		return 0;
-	}
-}
-*/
 int KolNullInColumn(int j, int** arr, int n)
 {
     int kol = 0;
@@ -183,13 +117,6 @@ void main(void)
             printf("Error !!!  This matrixis not restored");
             continue;
         }
-/*
-		if (Chek(arr, n, m, max_line, max_column) == 0)
-		{
-			printf("Error !!!  This matrixis not restored");
-			continue;
-		}
-*/
 
         for (j = 0; j < m; j++)
         {
